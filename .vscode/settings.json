@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/home/devdattakhoche/.local/share/virtualenvs/django_crm-B0Q0M4v-/bin/python",
+    "editor.formatOnSave": true,
+    "python.formatting.provider": "black",
+}
