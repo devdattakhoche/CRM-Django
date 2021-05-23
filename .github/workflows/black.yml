@@ -1,2 +1,0 @@
-- name: Python Black Check
-  uses: RojerGS/python-black-check@v1.2
