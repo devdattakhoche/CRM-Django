@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    These are all the leads
+    <a href="{% url 'lead_create' %}">Create a lead</a>
+    <hr>
+
+    {% for lead in leads %}
+    <div>
+        <a href="{% url 'lead_detail' lead.id %}">{{lead.first_name}}</a>
+        {{lead.last_name}}
+        {{lead.age}}
+        {{lead.agent}}
+
+        <br>
+        <a href="{% url 'lead_update' lead.id %}">update br0</a>
+
+        <a href="{% url 'lead_delete' lead.id %}">delete br0</a>
+    </div>
+    <br />
+    {% endfor %}
+</body>
+
+</html>
