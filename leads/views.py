@@ -21,7 +21,7 @@ def lead_create(request):
         form = LeadModelForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("lead_list")
+            return redirect("leads:lead_list")
     params = {"form": LeadModelForm()}
     return render(request, "leads/lead_create.html", params)
 
@@ -41,7 +41,7 @@ def lead_update(request, id):
 def lead_delete(request, id):
     lead = Lead.objects.get(id=id)
     lead.delete()
-    return redirect("lead_list")
+    return redirect("leads:lead_list")
 
 
 # def lead_update(request, id):
